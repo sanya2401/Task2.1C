@@ -1,0 +1,63 @@
+body {
+    font-size: 20px;
+    background-image: url(nicola-styles-qWFMm1iRJkM-unsplash.jpg);
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#app {
+    background-color: rgb(231, 227, 227, 0.5);
+    padding: 2rem;
+    border-radius: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container {
+ margin: 0.3rem;   
+}
+h1{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 1.5rem, 1.5rem,grey;
+}
+#input_box {
+    border-radius: 10%;
+    color: rgb(41, 41, 41);
+    width: 80%;
+}
+
+#addButton {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(196, 27, 27);
+    border: none;
+    border-radius: 8%;
+    font-size: 1.2rem;
+    text-shadow: 0.1rem, 0.1rem, grey;
+    box-shadow: grey;
+    width: max-content;
+    padding: 0.2rem;
+    align-self: center;
+}
+
+#delete_button{
+    background-color: rgb(215, 23, 23,0.7);
+    border-radius: 8%;
+    padding: 0.15rem;
+    border: none;
+    width: max-content;
+    align-self: center;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+}

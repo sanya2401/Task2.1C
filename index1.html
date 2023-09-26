@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Webpage</title>
+    <link rel="stylesheet" href="styles1.css">
+    <style>
+        body{
+            background-image: url(joanna-kosinska-BteMcldTQVo-unsplash.jpg);
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+
+        <!-- Using v-if and v-else -->
+        <p v-if="showMessage" >This message will be displayed if showMessage is true.</p>
+        <p v-else>This message will be displayed if showMessage is true.</p> <!--will not be displayed as I have set v-if to true-->
+        
+        <!-- Using v-show -->
+        <p v-show="showElement" >This paragraph is shown with v-show</p>
+        
+        <!-- Using v-for -->
+        <ul>
+            <li v-for="item in items" :key="item.id" >{{item.name}}
+            </li>
+        </ul>
+        
+        <!-- Using v-if with v-for -->
+        <div v-for="item in itemsWithCondition" :key="item.id">
+            <p v-if="item.shouldRender">{{ item.text }}</p>
+            <p v-else>Item is not rendered.</p>
+          </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0/dist/vue.global.prod.js"></script>
+
+    <script src="main1.js"></script>
+    
+</body>
+</html>

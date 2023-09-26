@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-do page</title>
+    <style>
+        body{
+            background-image: url(nicola-styles-qWFMm1iRJkM-unsplash.jpg);
+            background-size: 100%;
+        }
+    </style>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <h1>CHECKLIST</h1>
+        <div class="container">
+            <input id="input_box"
+                type="text"
+                placeholder="Add task"
+                v-model="newTask"
+                @keyup.enter="addTask"
+            >
+        </div>
+        
+        <button id="addButton" @click="addTask">Add task</button>
+        <ul>
+            <li v-for="(task, index) in tasks" :key="index">
+                <input
+                    type="checkbox"
+                    v-model="task.completed"
+                    class="task-checkbox"
+                >
+                <p :class="{ completed: task.completed }">{{ task.text }}</p>
+                <button id="delete_button" @click="deleteTask(index)" class="delete-button">Delete</button>
+            </li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.11/dist/vue.global.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
